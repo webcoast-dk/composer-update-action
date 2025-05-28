@@ -1,0 +1,14 @@
+name: 'Composer Update + Pull Request'
+description: 'Automatically update composer dependencies and create a pull request'
+inputs:
+   includePattern:
+      description: 'Pattern to match packages to include in the composer update'
+      required: false
+      default: '.*'
+   excludePattern:
+      description: 'Pattern to match packages to exclude from the composer update'
+      required: false
+      default: ''
+runs:
+   using: 'node20'
+   main: 'index.js'
